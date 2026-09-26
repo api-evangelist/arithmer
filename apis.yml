@@ -1,23 +1,68 @@
 aid: arithmer
+
 name: Arithmer
-description: 'Arithmer is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://static.wixstatic.com/media/f9936b_48914d434d3e487ba0bbf1949f52bd06%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/f9936b_48914d434d3e487ba0bbf1949f52bd06%7Emv2.jpg
+
+description: 'Arithmer Inc. provides AI-driven solutions across multiple industries, including manufacturing, construction, logistics, retail, wind power, bio, and flood risk assessment. Their platform offers AI agents that automate complex tasks, improve operational efficiency, and enable data-driven decision making for enterprises worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arithmer/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- AI
+- Solutions
+- Enterprise
+- Automation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/arithmer-llms.txt
+- type: Hosts
+  url: hosts/arithmer-hosts.yml
+- type: Vendors
+  url: vendors/arithmer-vendors.yml
+- type: PrivacyPolicy
+  url: https://www.arithmer.com/privacy
+- type: Newsroom
+  url: https://www.arithmer.com/news-japanese-only/categories/news
+- type: DomainSecurity
+  url: security/arithmer-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.arithmer.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine-readable contract found at api.arithmer.com or www.arithmer.com.
+  evidence:
+    - url: https://api.arithmer.com/openapi.json
+      status: timeout
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
